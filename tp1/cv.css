@@ -1,0 +1,12 @@
+body{
+    background-color: grey; 
+}
+table{
+    background-color: white;
+}
+a:hover{
+    color: orange;
+}
+p:nth-child(odd) {
+    background: rgb(245, 143, 143);
+}
