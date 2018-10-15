@@ -1,33 +1,53 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire</title>
+    <link rel="stylesheet" type="text/css" href="Formulaire.css" />
+</head>
 
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
-    </head>
-    <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+<body>
+    <table width="100% " border="1">
+        <form action="">
+
+
+            <h1>Saisie d'une fiche "Personne"</h1>
+            <tr>
+                <td>Nom </td>
+                <td><input type="text" name="nom"> </td>
+
+            </tr>
+            <tr>
+                <td>Prénom </td>
+                <td><input type="text" name="Prénom"> </td>
+
+            </tr>
+            <tr>
+                <td>Date de naissance </td>
+                <td><input type="date" name="date"> </td>
+
+            </tr>
+            <tr>
+                <td>Adresse </td>
+                <td><input type="text" name="Adresse"> </td>
+
+            </tr>
+            <tr>
+                <td>Mail </td>
+                <td><input type="text" name="Mail"> </td>
+
+            </tr>
+            <tr>
+
+                <td colspan="2"><input type="submit" value="Valider"> </td>
+
+            </tr>
+
+
+
+        </form>
+    </table>
+</body>
+
 </html>
