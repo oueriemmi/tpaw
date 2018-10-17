@@ -1,4 +1,11 @@
 body{
-    background-color: 
+    background-color: rgb(216, 213, 213)
+}
+form{
+    background-color: white
 }
 
+.error{
+    background-color: pink
+
+}

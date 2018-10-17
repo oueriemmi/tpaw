@@ -5,49 +5,74 @@
     <meta charset="utf-8">
     <title>Formulaire</title>
     <link rel="stylesheet" type="text/css" href="Formulaire.css" />
+    <script type="text/javascript" src="formulaire.js"></script>
 </head>
 
 <body>
-    <table width="100% " border="1">
-        <form action="">
+        <h1>Saisie d'une fiche "Personne"</h1>
+        <form id="form" onsubmit="return validation();">
+               
+                <fieldset>
+                        <legend>Merci de remplir la formulaire</legend>
+
+            
+            <fieldset>
+            
+                 Nom :<br>
+                <input type="text" placeholder="Entrez votre nom" name="nom" id="nom" required
+                    minlength="5" maxlength="20"> 
+                    <span id="error"> </span>
+                    <br>
+
+            
+            
+                Prénom: <br>
+                <input type="text" placeholder="Entrez votre Prénom" name="Prénom" id="Prénom" required
+                    minlength="5" maxlength="20"> 
+                    <span id="error"></span>
+
+                    <br>
+
+            
+            
+                Date de naissance:<br> 
+                <input type="date" name="date" id="date"> 
+                <br>
+
+            
+            
+                Adresse Postale :<br>
+                <input type="text" placeholder="Entrez votre Adresse " name="Adresse Postale" id="Adresse Postale"required
+                    minlength="5" maxlength="50">  
+                    <span id="error"> </span>
+
+                    <br>
+
+            
+           
+                Mail  :<br>
+                <input type="text" placeholder="Entrez votre Mail" name="Mail" id="Mail" required
+                    minlength="5" maxlength="30"> 
+                    <span id="error" ></span>
+
+                    <br>
+                    <br>
+
+            
+            
+
+                <input type="submit" value="Valider" id="Valider"onclick="validation()"> 
+
+            
 
 
-            <h1>Saisie d'une fiche "Personne"</h1>
-            <tr>
-                <td>Nom </td>
-                <td><input type="text" name="nom"> </td>
-
-            </tr>
-            <tr>
-                <td>Prénom </td>
-                <td><input type="text" name="Prénom"> </td>
-
-            </tr>
-            <tr>
-                <td>Date de naissance </td>
-                <td><input type="date" name="date"> </td>
-
-            </tr>
-            <tr>
-                <td>Adresse </td>
-                <td><input type="text" name="Adresse"> </td>
-
-            </tr>
-            <tr>
-                <td>Mail </td>
-                <td><input type="text" name="Mail"> </td>
-
-            </tr>
-            <tr>
-
-                <td colspan="2"><input type="submit" value="Valider"> </td>
-
-            </tr>
-
-
-
+        </fieldset>
         </form>
-    </table>
+        
+        <div id="error">  </div>
+
+        <div id="resultat"> </div>
+    
 </body>
 
 </html>
