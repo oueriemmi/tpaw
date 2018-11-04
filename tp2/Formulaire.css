@@ -9,3 +9,12 @@ form{
     background-color: pink
 
 }
+
+div {  
+    box-sizing: border-box; 
+    width: 100%; 
+    border: 100px solid black; 
+    float: left; 
+    align-content: center; 
+    align-items: center; 
+}
