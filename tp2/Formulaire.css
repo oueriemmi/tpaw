@@ -2,19 +2,51 @@ body{
     background-color: rgb(216, 213, 213)
 }
 form{
-    background-color: white
+    background-color: rgb(243, 255, 172);
+    margin: 0 auto;
+    border-radius: 2em;
+   
+    
+}
+fieldset{
+    
+    padding: 30px;
+    border: 1px solid black;
+    width:50%;
+    height: 70%;
+    margin: 0 auto;
+    border-radius: 2em;
+    background-color: rgb(184, 252, 252)
 }
 
-.error{
-    background-color: pink
+
+
+#error{
+    background-color: rgb(255, 140, 159);
+    padding: 30px;
+    border: 1px solid black;
+    width: 43%;
+    margin: 0 auto;
 
 }
 
-div {  
-    box-sizing: border-box; 
-    width: 100%; 
-    border: 100px solid black; 
-    float: left; 
-    align-content: center; 
-    align-items: center; 
+#resultat{
+    background-color:rgb(101, 255, 101);
+    padding: 30px;
+    border: 1px solid white;
+    width: 43%;
+    margin: 0 auto;
+    
+}
+h1{ 
+    color: rgb(184, 67, 197);
+    font-weight: bold; 
+    text-decoration-style: wavy;
+    width:430px; 
+    
+    margin:auto; 
+    }
+legend{
+    color: rgb(99, 65, 250);
+    font-weight: bold; 
 }
