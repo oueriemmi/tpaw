@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+    date();
     $("#Valider").on("click", function (e) {
         e.preventDefault();
 
@@ -37,6 +39,15 @@ $(document).ready(function () {
             document.getElementById('welcome').innerHTML= "Bienvenue  "+ document.querySelector("#prenom").value;
             document.getElementById('message').innerHTML= "Vous etes nés le  "+ document.querySelector("#date").value +" et vous habitez ";
             document.getElementById('message2').innerHTML=  document.querySelector("#adresse").value ;
+
+            
+        
+        var urls = document.querySelectorAll('.mapUrl');
+
+        [].forEach.call(urls, function (item) {
+            // do whatever
+            item.setAttribute("href", "http://maps.google.com/maps?q="+document.querySelector("#adresse").value);
+        });
 
         }
 
