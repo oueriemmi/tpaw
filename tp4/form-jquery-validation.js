@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    date();
     $("#Valider").on("click", function (e) {
         e.preventDefault();
 
@@ -58,3 +59,4 @@ $(document).ready(function () {
 
     });
 });
+ 
