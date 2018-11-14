@@ -1,8 +1,9 @@
 $(document).ready(function () {
-
-    date();
+   
     $("#Valider").on("click", function (e) {
         e.preventDefault();
+        
+       
 
         // ce code est exécuter une fois que toute la page est téléchargée par le navigateur
         // voir plus : https://www.w3schools.com/js/js_htmldom.asp
@@ -49,6 +50,10 @@ $(document).ready(function () {
             item.setAttribute("href", "http://maps.google.com/maps?q="+document.querySelector("#adresse").value);
         });
 
+        $('#nom').on('nom',function(e){
+            $("#text").html($(this).length);
+        });
+
         }
 
 
@@ -58,5 +63,11 @@ $(document).ready(function () {
        
 
     });
+
+    
+    $("#gpst").on("click", function getLocation(event){ 
+        event.preventDefault(); 
+        console.log( "click" ); 
+      }
+    
 });
- 
