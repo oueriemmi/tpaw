@@ -14,6 +14,8 @@ function showPosition(position) {
     +latlon+"&zoom=14&size=400x300&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg";
     
     $("#map").html("<img src='"+img_url+"'>");
+    document.getElementById('#map2').innerHTML = "Les cordonnés de votre position sont:"+latlon;
+    
 }
 
 // Au cas ou l'utilisateur refuse
