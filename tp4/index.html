@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>formulaire TP</title>
+    <title>formulaire avec Bootstrap</title>
     <link rel="stylesheet" type="text/css" href="form.css" />
     <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
     <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/gps.js"></script>
+    <script src="js/val.js"></script>
 
     <!-- CSS boostrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -16,7 +18,6 @@
     <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/form-jquery-validation.js"></script>
-    <script src="date.js"></script>
 </head>
 
 <body>
@@ -26,11 +27,13 @@
             <div class="form-group">
                 <label for="inputNom">Nom</label>
                 <input type="text" class="form-control" id="nom" placeholder="Nom">
+                <div  id="test1"></div>
             </div>
 
             <div class="form-group">
                 <label for="inputPrenom">Prénom</label>
                 <input type="text" class="form-control" id="prenom" placeholder="Prénom">
+                <span id="test2"></span>
             </div>
 
 
@@ -43,12 +46,14 @@
             </div>
             <div class="form-group">
                 <label for="inputAdresse">Adresse</label>
-                <input type="text" class="form-control" id="adresse" placeholder="Adresse">
+                <input type="text" class="form-control" id="adresse" placeholder="Adresse"><button type="button" id="gps" class="btn btn-warning"  onclick=getLocation(); >&#x1F3C1;GPS </button>
+                <span id="test3"></span>
+                <div id="map"></div>
             </div>
 
             <div class="form-group">
                 <label for="inputMail">Mail</label>
-                <input type="email" class="form-control" id="mail" placeholder="Mail">
+                <input type="email" class="form-control" id="mail" placeholder="Mail"><span id="test4"></span>
             </div>
 
             <button class="btn btn-primary" type="submit" id="Valider">Valider </button>
@@ -105,6 +110,38 @@
 
 
     </div>
+
+    <h3>Listes des contacts</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Date de naissance</th>
+                <th scope="col">Adresse</th>
+                <th scope="col">Mail</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+           >
+        </tbody>
+    </table>
+
+
+
 
 </body>
 

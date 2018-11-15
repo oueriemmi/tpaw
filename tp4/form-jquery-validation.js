@@ -1,9 +1,16 @@
+
 $(document).ready(function () {
-   
+    $("#gps").on("click", function (e) {
+        e.preventDefault();
+    
+    });
+
+
+
     $("#Valider").on("click", function (e) {
         e.preventDefault();
-        
-       
+
+
 
         // ce code est exécuter une fois que toute la page est téléchargée par le navigateur
         // voir plus : https://www.w3schools.com/js/js_htmldom.asp
@@ -36,38 +43,39 @@ $(document).ready(function () {
             $('#myModal').modal("show");
         }
         else {
+             
             $('#myModal2').modal("show");
-            document.getElementById('welcome').innerHTML= "Bienvenue  "+ document.querySelector("#prenom").value;
-            document.getElementById('message').innerHTML= "Vous etes nés le  "+ document.querySelector("#date").value +" et vous habitez ";
-            document.getElementById('message2').innerHTML=  document.querySelector("#adresse").value ;
+            document.getElementById('welcome').innerHTML = "Bienvenue  " + document.querySelector("#prenom").value;
+            document.getElementById('message').innerHTML = "Vous etes nés le  " + document.querySelector("#date").value + " et vous habitez ";
+            document.getElementById('message2').innerHTML = document.querySelector("#adresse").value;
+            contactStore.add(_name, _firsname, _date, _adress, _mail)
 
-            
-        
-        var urls = document.querySelectorAll('.mapUrl');
 
-        [].forEach.call(urls, function (item) {
-            // do whatever
-            item.setAttribute("href", "http://maps.google.com/maps?q="+document.querySelector("#adresse").value);
+             }
+
+            var urls = document.querySelectorAll('.mapUrl');
+
+            [].forEach.call(urls, function (item) {
+                // do whatever
+                item.setAttribute("href", "http://maps.google.com/maps?q=" + document.querySelector("#adresse").value);
+            });
+
+
+
+
+
+
+
+
+
+
+
         });
-
-        $('#nom').on('nom',function(e){
-            $("#text").html($(this).length);
-        });
-
-        }
-
-
-
 
 
        
 
-    });
-
-    
-    $("#gpst").on("click", function getLocation(event){ 
-        event.preventDefault(); 
-        console.log( "click" ); 
-      }
+        
+        
     
 });

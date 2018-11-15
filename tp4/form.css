@@ -8,3 +8,9 @@ form{
     border-radius: 2em;
    
 }
+
+
+#test1 {
+    display: inline;
+    text-align: right;
+  }
