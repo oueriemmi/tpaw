@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
 
     $("#Valider").on("click", function (e) {
         e.preventDefault();
@@ -34,10 +35,10 @@ $(document).ready(function () {
             $('#myModal').modal("show");
         }
         else {
-            $('#myModal2').modal("show");
-            document.getElementById('welcome').innerHTML= "Bienvenue  "+ document.querySelector("#prenom").value;
-            document.getElementById('message').innerHTML= "Vous etes nés le  "+ document.querySelector("#date").value +" et vous habitez ";
-            document.getElementById('message2').innerHTML=  document.querySelector("#adresse").value ;
+           // $('#myModal2').modal("show");
+            //document.getElementById('welcome').innerHTML= "Bienvenue  "+ document.querySelector("#prenom").value;
+            //document.getElementById('message').innerHTML= "Vous etes nés le  "+ document.querySelector("#date").value +" et vous habitez ";
+            //document.getElementById('message2').innerHTML=  document.querySelector("#adresse").value ;
 
             
         
@@ -56,5 +57,37 @@ $(document).ready(function () {
 
        
 
+    });
+
+
+    $("#valider").on("click",function store(event) { 
+        event.preventDefault();
+        
+            var inputNom= document.getElementById("nom");
+            var inputPrenom= document.getElementById("prenom");
+            var inputDn= document.getElementById("date");
+            var inputAdresse= document.getElementById("adresse");
+            var inputEmail= document.getElementById("mail");
+            
+            if($("#nom").val() !== "" && $("#prenom").val() !== "" && $("#date").val() !== "" && $("#adresse").val() !== "" && $("#mail").val() !== "" ){
+            
+            //stocker les valeurs saisie dans le navigateur
+            localStorage.setItem("nom", inputNom.value);
+            localStorage.setItem("prenom", inputPrenom.value);
+            localStorage.setItem("date", inputDn.value);
+            localStorage.setItem("adresse", inputAdresse.value);
+            localStorage.setItem("mail", inputEmail.value);
+
+            $('#myModal2').modal("show");
+            document.getElementById('welcome').innerHTML= "Bienvenue ! le contact est bien enregistré ";
+
+          
+           
+           // ajout des valeurs saisie dans le tableau
+           document.querySelector("table tbody").innerHTML = document.querySelector("table tbody")
+           .innerHTML +'<tr><td>'+localStorage.getItem("nom")+'</td><td>'+localStorage.getItem("prenom") +'</td><td>'+localStorage.getItem("date")+'</td><td><a href="https://maps.google.com/maps?q=' +localStorage.getItem("adresse")+'">'+localStorage.getItem("adresse") +'</a></td><td><a href=mailto:>'+localStorage.getItem("mail")+'</a></td>';
+           }
+           $("#table").show();
+          
     });
 });
