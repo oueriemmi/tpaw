@@ -1,20 +1,21 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP5</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/vue.js"></script>
-        <script src="js/main.js"></script>
-        <style>
-          body{
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>TP5</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        body{
               background-color: #e9ebee;              
               font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
               font-size: 16px;
@@ -22,33 +23,39 @@
               max-width: 800px;              
           }
         </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
+
+    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+    <!--<link rel="stylesheet" href="style.css">-->
+    <!--<script src="main.js"></script>-->
+</head>
+
+<body>
+
+    <div id="weatherApp">
         <h1>WebApp Météo avec Vuejs</h1>
+        {{message}}
         <!-- formulaire de saisie de ville -->
-<form v-on:submit="addCity">
-    <div class="input-group">
-        <input type="search" class="form-control" v-model="formCityName" placeholder="Search for..." aria-label="Search for..." autofocus required >
-        <span class="input-group-btn">
-            <button class="btn btn-primary" type="submit">Go!</button>
-        </span>
-    </div>
+        <form v-on:submit="addCity">
+            <div class="input-group">
+                <input type="search" class="form-control" v-model="formCityName" placeholder="Search for..." aria-label="Search for..."
+                    autofocus required>
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">Go!</button>
+                </span>
+            </div>
 
-    <!-- affichage de nombre de caractères saisie -->
-    <small class="text-muted">
-        {{formCityName.length}} car.
-    </small>
+            <!-- affichage de nombre de caractères saisie -->
+            <small class="text-muted">
+                {{formCityName.length}} car.
+            </small>
 
-    <div class="alert alert-danger" role="alert" v-if='messageForm != ""'>
-        {{messageForm}}
-    </div>                
-</form>
-<!-- fin: formulaire de saisie de ville -->
+            <div class="alert alert-danger" role="alert" v-if='messageForm != ""'>
+                {{messageForm}}
+            </div>
+        </form>
+        <!-- fin: formulaire de saisie de ville -->
         <!-- Add your site or application content here -->
-        
-    </body>
+    </div>
+</body>
+
 </html>

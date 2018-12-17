@@ -44,7 +44,18 @@ window.onload = function () {
                 event.preventDefault(); // pour ne pas recharger la page à la soumission du formulaire
 
                 console.log('formCityName:',this.formCityName);
+
                 // A compléter dans la suite du TP  
+                
+
+                this.cityList.push({name : this.formCityName});
+
+                // remise à zero du message affiché sous le formulaire
+                this.messageForm = '';
+
+                // remise à zero du champ de saisie
+                this.formCityName = '';
+                console.log(this.cityList)
             },
             remove: function (_city) {      
                 // A compléter dans la suite du TP          
