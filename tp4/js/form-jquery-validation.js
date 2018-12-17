@@ -35,7 +35,7 @@ $(document).ready(function () {
             $('#myModal').modal("show");
         }
         else {
-            // $('#myModal2').modal("show");
+            ('#myModal2').modal("show");
             //document.getElementById('welcome').innerHTML= "Bienvenue  "+ document.querySelector("#prenom").value;
             //document.getElementById('message').innerHTML= "Vous etes nés le  "+ document.querySelector("#date").value +" et vous habitez ";
             //document.getElementById('message2').innerHTML=  document.querySelector("#adresse").value ;

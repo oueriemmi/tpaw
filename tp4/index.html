@@ -28,27 +28,27 @@
         <form id="form" action="" onsubmit="validation(); return false">
             <div class="form-group">
                 <label for="inputNom">Nom</label>
-                <input type="text" class="form-control" id="nom" placeholder="Nom">
+                <input type="text" class="form-control" id="nom" placeholder="Nom" autofocus required >
                 <div  id="test1"></div>
             </div>
 
             <div class="form-group">
                 <label for="inputPrenom">Prénom</label>
-                <input type="text" class="form-control" id="prenom" placeholder="Prénom">
+                <input type="text" class="form-control" id="prenom" placeholder="Prénom" required>
                 <span id="test2"></span>
             </div>
 
 
 
             <div class="form-group row">
-                <label for="inputDate" class="col-10 col-form-label">Date de naissance</label>
+                <label for="inputDate" class="col-10 col-form-label">Date de naissance</label >
                 <div class="col-10">
-                    <input class="form-control" type="date" id="date" placeholder="Date naissance">
+                    <input class="form-control" type="date" id="date" placeholder="Date naissance" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputAdresse">Adresse</label>
-                <input type="text" class="form-control" id="adresse" placeholder="Adresse"><button type="button" id="gps" class="btn btn-warning"  onclick=getLocation(); >&#x1F3C1;GPS </button>
+                <input type="text" class="form-control" id="adresse" placeholder="Adresse" required><button type="button" id="gps" class="btn btn-warning"  onclick=getLocation(); >&#x1F3C1;GPS </button>
                 <span id="test3"></span>
                 <div id="map"></div>
                 <div id="map2"></div>
@@ -56,10 +56,10 @@
 
             <div class="form-group">
                 <label for="inputMail">Mail</label>
-                <input type="email" class="form-control" id="mail" placeholder="Mail"><span id="test4"></span>
+                <input type="email" class="form-control" id="mail" placeholder="Mail" required><span id="test4" required></span>
             </div>
 
-            <button class="btn btn-primary" type="submit" id="Valider">Valider </button>
+            <button class="btn btn-primary" type="submit" id="Validerà">Valider </button>
         </form>
 
         <div class="modal" tabindex="-1" role="dialog" id="myModal">
