@@ -26,8 +26,8 @@ const appRoutes: Routes = [
   }
 ];
 
-
-
+// la page principale utilisera le component suivant
+// la page principale utilisera le component suivant
 
 @NgModule({
   declarations: [
