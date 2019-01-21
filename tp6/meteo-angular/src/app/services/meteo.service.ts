@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MeteoItem } from '../meteoItem';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class MeteoService {
 
   constructor() { }
@@ -30,7 +30,7 @@ export class MeteoService {
             + ' (' + json.message + ')');
 
           return Promise.reject('Météo introuvable pour ' + name
-          + ' (' + json.message + ')');
+            + ' (' + json.message + ')');
         }
 
       });
