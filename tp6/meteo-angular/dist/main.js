@@ -153,6 +153,8 @@ var appRoutes = [
         component: _meteo_meteo_component__WEBPACK_IMPORTED_MODULE_5__["MeteoComponent"]
     }
 ];
+// la page principale utilisera le component suivant
+// la page principale utilisera le component suivant
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
